@@ -1,4 +1,4 @@
-describe('Words', function() {
+describe('RandomWord', function() {
   it("will generate a word", function() {
     var testRandomWord = new RandomWord("Ocean");
     expect(testRandomWord.word).to.equal("Ocean");
@@ -13,9 +13,13 @@ describe('Words', function() {
     var testRandomWord = new RandomWord("Ocean");
     expect(testRandomWord.letterCount()).to.equal(5);
   });
+});
 
-  // it("will generate a list of words", function() {
-  //   var testWords = new Words(["ocean", "beach", "waves", "palm tree", "coconut", "margarita"]);
-  //   expect(testWords.word).to.equal(["ocean", "beach", "waves", "palm tree", "coconut", "margarita"]);
-  // });
+describe('Words', function () {
+  it("will generate an array of words and find the length of the array", function() {
+    var testWordArray = ["ocean", "beach", "waves", "sunshine", "coconut", "margarita"];
+    var testWords = new Words(testWordArray);
+    expect(testWords.randomWordArray.length).to.equal(6);
+  });
+
 });
