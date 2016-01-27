@@ -16,10 +16,15 @@ describe('RandomWord', function() {
 });
 
 describe('Words', function () {
-  it("will generate an array of words and find the length of the array", function() {
+  it("will determine whether or not an array is populated with word objects", function() {
     var testWordArray = ["ocean", "beach", "waves", "sunshine", "coconut", "margarita"];
     var testWords = new Words(testWordArray);
     expect(testWords.randomWordArray.length).to.equal(6);
+  });
+  it("will return a random number based on length of the word object array", function() {
+    var testWordArray = ["ocean", "beach", "waves", "sunshine", "coconut", "margarita"];
+    var testWords = new Words(testWordArray);
+    expect(testWords.randomNumber()).to.be.a('int');
   });
 
 });

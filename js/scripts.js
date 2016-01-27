@@ -21,6 +21,12 @@ function Words (wordArray) {
   };
 };
 
+Words.prototype.randomNumber = function () {
+  var newRandomWord = this.randomWordArray[Math.floor(Math.random()*this.randomWordArray.length)] + 1;
+  return newRandomWord.index;
+  // return Math.floor(Math.random()* this.randomWordArray.length) + 1;
+}
+
 
 
 
