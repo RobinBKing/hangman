@@ -8,12 +8,12 @@ RandomWord.prototype.letterArray = function () {
 
 }
 
-// RandomWord.prototype.letterCount = function () {
-//   return this.letterArray().length;
-// }
-//
-//
-//
+RandomWord.prototype.letterCount = function () {
+  return this.letterArray().length;
+}
+
+
+
 
 
 
