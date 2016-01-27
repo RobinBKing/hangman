@@ -27,7 +27,10 @@ var newRandomWord = function(randomWordArray, index) {
   return newWord.word;
 }
 
-
+var newRandomWordCount = function (randomWordArray, index) {
+  var newWord = randomWordArray[index];
+  return newWord.letterCount();
+}
 
 
 

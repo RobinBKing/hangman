@@ -23,10 +23,17 @@ describe('Words', function () {
   });
 });
 
-describe('newRandomWord', function () {
-  it("will return a randomWord object and a value from the object", function() {
+describe('newWordObjects', function () {
+  it("will return a randomWord object and the word property from the object", function() {
     var testWordArray = ["ocean", "beach", "waves", "sunshine", "coconut", "margarita"];
     var testWords = new Words(testWordArray);
     expect(newRandomWord(testWords.randomWordArray, 0)).to.equal("ocean");
   });
+
+  it("will return a randomWord object and the word count from the object", function() {
+    var testWordArray = ["ocean", "beach", "waves", "sunshine", "coconut", "margarita"];
+    var testWords = new Words(testWordArray);
+    expect(newRandomWordCount(testWords.randomWordArray, 0)).to.equal(5);
+  });
+
 });
