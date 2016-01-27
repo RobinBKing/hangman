@@ -1,3 +1,4 @@
+
 //business logic
 function RandomWord (word) {
   this.word = word;
@@ -21,11 +22,22 @@ function Words (wordArray) {
   };
 };
 
-Words.prototype.randomNumber = function () {
-  var newRandomWord = this.randomWordArray[Math.floor(Math.random()*this.randomWordArray.length)] + 1;
-  return newRandomWord.index;
-  // return Math.floor(Math.random()* this.randomWordArray.length) + 1;
+var newRandomWord = function(randomWordArray, index) {
+  var newWord = randomWordArray[index];
+  return newWord.word;
 }
+
+
+
+
+
+
+
+// Words.prototype.randomNumber = function () {
+//   var newRandomWord = this.randomWordArray[Math.floor(Math.random()*this.randomWordArray.length)] + 1;
+//   return newRandomWord.index;
+//
+// }
 
 
 
