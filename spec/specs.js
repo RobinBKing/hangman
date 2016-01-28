@@ -42,6 +42,4 @@ describe('newWordObjects', function () {
     expect(newLetterArray(testWords.randomWordArray, 0)).to.eql["O","c","e","a","n"];
   });
 
-
-
 });

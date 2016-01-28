@@ -1,3 +1,6 @@
-#result {
-  display: none;
+.letterSpaces {
+  border-bottom: 3px solid black;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 100px;
 }
