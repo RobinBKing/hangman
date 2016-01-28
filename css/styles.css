@@ -4,3 +4,17 @@
   margin-right: 8px;
   margin-top: 100px;
 }
+
+.btn {
+
+}
+
+img {
+  max-width: 100%;
+}
+
+#letterBox {
+  margin: 30px;;
+  font-size: 40px;
+  font-family:  "Indie Flower";
+}
