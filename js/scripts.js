@@ -39,23 +39,19 @@ var newLetterArray = function (randomWordArray, index) {
 
 
 
-
-
-// Words.prototype.randomNumber = function () {
-//   var newRandomWord = this.randomWordArray[Math.floor(Math.random()*this.randomWordArray.length)] + 1;
-//   return newRandomWord.index;
-//
-// }
-
-
-
-
-
-
-
-
-
-
 // //interface
-// $(document).ready(function() {
-// });
+$(document).ready(function() {
+
+  var newWordArray = ["ocean", "beach", "waves", "sunshine", "coconut", "margarita"];
+  var newWords = new Words(testWordArray);
+  for (var i = 0; i < newWords.randomWordArray.length; i++){
+      var newWord = newRandomWord(newWords.randomWordArray, i);
+      var newLetterArray = newLetterArray(newWords.randomWordArray, i);
+      var newWordCount = newRandomWordCount(newWords.randomWordArray, i);
+
+
+    }
+
+
+
+});
