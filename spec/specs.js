@@ -36,4 +36,12 @@ describe('newWordObjects', function () {
     expect(newRandomWordCount(testWords.randomWordArray, 0)).to.equal(5);
   });
 
+  it("will return a randomWord object and the letter array from the object", function() {
+    var testWordArray = ["ocean", "beach", "waves", "sunshine", "coconut", "margarita"];
+    var testWords = new Words(testWordArray);
+    expect(newLetterArray(testWords.randomWordArray, 0)).to.eql["O","c","e","a","n"];
+  });
+
+
+
 });
