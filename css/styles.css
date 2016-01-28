@@ -18,3 +18,11 @@ img {
   font-size: 40px;
   font-family:  "Indie Flower";
 }
+
+#underscores {
+  font-size: 26px;
+}
+
+.letters {
+  display: none;
+}
