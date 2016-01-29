@@ -78,7 +78,8 @@ $(document).ready(function() {
           if(searchCount >= letterArray.length){
             turnCount -= 1;
             $("#hangmanImg").empty().append("<img src='img/hangman" + turnCount + ".jpg'/>");
-            if (turnCount = 0){
+
+            if (turnCount === 0){
               alert("You lose!");
             };
 
