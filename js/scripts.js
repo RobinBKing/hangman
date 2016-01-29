@@ -48,40 +48,40 @@ $(document).ready(function() {
   var wordIndex = newWordArray.length;
   $("#letsPlay").click(function() {
     $("#underscores").empty();
-      wordIndex = wordIndex - 1;
-      if(wordIndex > -1){
-        var turnCount = 6;
-        $("#hangmanImg").empty().append("<img src='img/hangman" + turnCount + ".jpg'/>");
-        var newWord = newRandomWord(newWords.randomWordArray, wordIndex);
-        var letterArray = newLetterArray(newWords.randomWordArray, wordIndex);
-        var newletterCount = letterArray.length;
-        var columnWidth = Math.floor(12 / letterArray.length);
+    wordIndex = wordIndex - 1;
+    if(wordIndex > 0){
+      var turnCount = 6;
+      $("#hangmanImg").empty().append("<img src='img/hangman" + turnCount + ".jpg'/>");
+      var newWord = newRandomWord(newWords.randomWordArray, wordIndex);
+      var letterArray = newLetterArray(newWords.randomWordArray, wordIndex);
+      var newletterCount = letterArray.length;
+      var columnWidth = Math.floor(12 / letterArray.length);
 
-        for (var i = 0; i < newletterCount; i++) {
-          $("#underscores").append("<div class='col-md-" + columnWidth + " letterSpaces'><span class='letters' id='letter" + i + "'>" + letterArray[i] + "</span></div>");
-        };
-
-        $(".alphabetClick").click(function(){
-          var letterchoice = $(this).text();
-          var searchCount = 0;
-          for (var j = 0; j < newletterCount; j++){
-            if (letterchoice.toLowerCase() === letterArray[j].toLowerCase()){
-              $("#letter" + j).show();
-            }
-            else{
-              searchCount += 1;
-            };
-          };
-          if(searchCount >= letterArray.length){
-            turnCount -= 1;
-            $("#hangmanImg").empty().append("<img src='img/hangman" + turnCount + ".jpg'/>");
-            if (turnCount === 0){
-              alert("You lose!");
-            };
-          };
-        });
-      } else {
-        alert("You've run out of words. Please Refresh the page to play again");
+      for (var i = 0; i < newletterCount; i++) {
+        $("#underscores").append("<div class='col-md-" + columnWidth + " letterSpaces'><span class='letters' id='letter" + i + "'>" + letterArray[i] + "</span></div>");
       };
-    });
+
+      $(".alphabetClick").click(function(){
+        var letterchoice = $(this).text();
+        var searchCount = 0;
+        for (var j = 0; j < newletterCount; j++){
+          if (letterchoice.toLowerCase() === letterArray[j].toLowerCase()){
+            $("#letter" + j).show();
+          }
+          else{
+            searchCount += 1;
+          };
+        };
+        if(searchCount >= letterArray.length){
+          turnCount -= 1;
+          $("#hangmanImg").empty().append("<img src='img/hangman" + turnCount + ".jpg'/>");
+          if (turnCount === 0){
+            alert("You lose!");
+          };
+        };
+      });
+    } else {
+      alert("You've run out of words. Please Refresh the page to play again");
+    };
+  });
 });
